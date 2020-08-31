@@ -6,7 +6,7 @@ const Sun = ({ ...props }) => {
   const motions = (delay: number) => ({
     initial: { y: -400 },
     exit: { y: -400 },
-    animate: { y: 0 },
+    animate: { y: 20 },
     transition: { delay: delay, type: "spring", stiffness: 200, damping: 20 }
   });
   return (
