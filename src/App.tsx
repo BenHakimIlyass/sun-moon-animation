@@ -18,8 +18,8 @@ export default function App() {
           : "linear-gradient(180deg, #FFFAEB, #FFFFFF)"
       }}
     >
-      <AnimatePresence exitBeforeEnter>{dark && <Night />}</AnimatePresence>
       <AnimatePresence exitBeforeEnter>{!dark && <Midday />}</AnimatePresence>
+      <AnimatePresence exitBeforeEnter>{dark && <Night />}</AnimatePresence>
       <Playground
         whileTap={{ scale: 1.1 }}
         initial={{ backgroundColor: "#000" }}
