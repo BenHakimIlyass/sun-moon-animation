@@ -1,9 +1,9 @@
 import * as React from "react";
 import "./styles.css";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
-import Moon from "./moon";
-import Sun from "./sun";
+import Night from "./night";
+import Midday from "./midday";
 
 export default function App() {
   const [dark, toggle] = React.useState(false);
@@ -18,8 +18,8 @@ export default function App() {
           : "linear-gradient(180deg, #FFFAEB, #FFFFFF)"
       }}
     >
-      <Moon dark={dark} />
-      <Sun dark={dark} />
+      <AnimatePresence exitBeforeEnter>{dark && <Night />}</AnimatePresence>
+      <AnimatePresence exitBeforeEnter>{!dark && <Midday />}</AnimatePresence>
       <Playground
         whileTap={{ scale: 1.1 }}
         initial={{ backgroundColor: "#000" }}
@@ -41,6 +41,7 @@ export default function App() {
 }
 const Main = styled(motion.div)`
   height: 100vh;
+  width: 100%;
   overflow: hidden;
 `;
 const Toggle = styled(motion.div)`
