@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Sun from "./sun";
 import Umbrella from "./umbrella";
 import Beach from "./beach";
+import Boat from "./boat";
+
 const Midday = ({ ...props }) => {
   const motions = (delay: number) => ({
     initial: { y: -400 },
@@ -14,6 +16,7 @@ const Midday = ({ ...props }) => {
       <Sun />
       <Beach />
       <Umbrella />
+      <Boat />
     </div>
   );
 };

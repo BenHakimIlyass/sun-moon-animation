@@ -1,7 +1,8 @@
 import * as React from "react";
-import "./styles.css";
-import { motion, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
+import "./styles.css";
+
 import Night from "./night";
 import Midday from "./midday";
 
@@ -20,7 +21,7 @@ export default function App() {
     >
       <Playground
         onTap={() => toggle((prev) => !prev)}
-        whileTap={{ scale: 0.9, backgroundColor: dark ? "#102A43" : "#DFF7FA" }}
+        whileTap={{ scale: 0.9, backgroundColor: dark ? "#102A43" : "#F4ECD1" }}
       >
         <AnimatePresence exitBeforeEnter>{!dark && <Midday />}</AnimatePresence>
         <AnimatePresence exitBeforeEnter>{dark && <Night />}</AnimatePresence>
@@ -41,6 +42,7 @@ const Playground = styled(motion.div)`
   cursor: pointer;
   width: 100%;
   border-radius: 30px;
+  position: relative;
 `;
 const P = styled(motion.p)`
   position: absolute;
