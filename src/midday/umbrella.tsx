@@ -30,7 +30,7 @@ const Umbrella = ({ ...props }) => {
         height="101"
         viewBox="0 0 101 101"
         fill="none"
-        {...motions(0.1, { x: -300 })}
+        {...motions(0.2, { x: -300 })}
         animate={{ x: 20 }}
       >
         <path

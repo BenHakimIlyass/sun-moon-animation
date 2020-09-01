@@ -27,7 +27,7 @@ const Buoy = ({ ...props }) => {
       {...props}
     >
       <motion.svg
-        {...motions(0)}
+        {...motions(0.3)}
         width="146"
         height="146"
         viewBox="0 0 146 146"

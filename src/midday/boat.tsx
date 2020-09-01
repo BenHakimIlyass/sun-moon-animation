@@ -8,40 +8,41 @@ const motions = (delay: number, y?: number) => ({
   transition: { delay: delay, type: "spring", stiffness: 200, damping: 20 }
 });
 
-const repeats = {
+const repeats = (delay: number) => ({
   transition: {
+    delay: delay,
     duration: 0.8,
     repeatType: "mirror",
     repeat: Infinity
   }
-};
+});
 const Boat = ({ ...props }) => {
   return (
     <div
       style={{
         position: "absolute",
-        bottom: 100,
+        bottom: "10%",
         right: "20%"
       }}
       {...props}
     >
       <motion.svg
-        {...motions(0)}
-        width="142"
+        {...motions(0.3)}
+        width="148"
         height="144"
         viewBox="0 0 132 132"
         fill="none"
       >
         <motion.g
           clipPath="url(#clip0)"
-          {...repeats}
-          initial={{ y: -4 }}
-          animate={{ y: 0 }}
-          exit={{ y: 4 }}
+          {...repeats(0)}
+          initial={{ rotate: -4 }}
+          animate={{ rotate: 0 }}
+          exit={{ rotate: 4 }}
         >
           {/* flags start */}
           <motion.path
-            {...repeats}
+            {...repeats(0.1)}
             initial={{ y: -4 }}
             animate={{ y: 0 }}
             exit={{ y: 4 }}
@@ -49,7 +50,7 @@ const Boat = ({ ...props }) => {
             fill="url(#blue_flag)"
           />
           <motion.path
-            {...repeats}
+            {...repeats(0.2)}
             initial={{ y: -4 }}
             animate={{ y: 0 }}
             exit={{ y: 4 }}
@@ -61,7 +62,7 @@ const Boat = ({ ...props }) => {
             fill="#EFC534"
           />
           <motion.path
-            {...repeats}
+            {...repeats(0, 3)}
             initial={{ rotate: -4 }}
             animate={{ rotate: 0 }}
             exit={{ rotate: 4 }}

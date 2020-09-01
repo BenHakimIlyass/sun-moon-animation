@@ -30,7 +30,7 @@ const Lighthouse = ({ ...props }) => {
         height="165"
         viewBox="0 0 135 135"
         fill="none"
-        {...motions(0.1, { x: -300 })}
+        {...motions(0.2, { x: -300 })}
         animate={{ x: 0 }}
       >
         <g clipPath="url(#clip100)">
