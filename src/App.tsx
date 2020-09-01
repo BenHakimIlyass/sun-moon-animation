@@ -47,6 +47,8 @@ const Main = styled(motion.div)`
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  padding: 40px;
+  box-sizing: border-box;
 `;
 
 const Playground = styled(motion.div)`
@@ -56,7 +58,7 @@ const Playground = styled(motion.div)`
   width: 100%;
   border-radius: 30px;
   position: relative;
-  margin: 40px auto;
+  margin: 0px auto;
   max-width: 1200px;
   box-shadow: 0px 0px 16px rgba(152, 163, 183, 0.24);
 `;
