@@ -21,14 +21,14 @@ const Buoy = ({ ...props }) => {
     <div
       style={{
         position: "absolute",
-        bottom: "10%",
+        bottom: "4vw",
         right: "20%"
       }}
       {...props}
     >
       <motion.svg
         {...motions(0.3)}
-        width="146"
+        width="186"
         height="146"
         viewBox="0 0 146 146"
         fill="none"
