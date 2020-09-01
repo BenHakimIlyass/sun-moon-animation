@@ -16,7 +16,7 @@ const repeats = (delay: number) => ({
     duration: 0.8
   }
 });
-const Boat = ({ ...props }) => {
+const Buoy = ({ ...props }) => {
   return (
     <div
       style={{
@@ -29,7 +29,7 @@ const Boat = ({ ...props }) => {
       <motion.svg
         {...motions(0)}
         width="146"
-        height="136"
+        height="146"
         viewBox="0 0 146 146"
         fill="none"
       >
@@ -43,9 +43,9 @@ const Boat = ({ ...props }) => {
           {/* top of the buoy */}
           <motion.path
             {...repeats(0.1)}
-            initial={{ y: -4 }}
+            initial={{ y: 4 }}
             animate={{ y: 0 }}
-            exit={{ y: 4 }}
+            exit={{ y: -4 }}
             d="M69.267 0H65.7336C62.6872 0 60.111 2.25466 59.7073 5.27441L57.8262 19.3483H77.1745L75.2934 5.27441C74.8897 2.25466 72.3137 0 69.267 0Z"
             fill="url(#paint10)"
           />
@@ -213,4 +213,4 @@ const Boat = ({ ...props }) => {
     </div>
   );
 };
-export default Boat;
+export default Buoy;

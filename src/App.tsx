@@ -8,6 +8,7 @@ import Midday from "./midday";
 
 export default function App() {
   const [dark, toggle] = React.useState(false);
+
   return (
     <Main
       initial={{
@@ -20,7 +21,7 @@ export default function App() {
       }}
       whileTap={{
         backgroundImage: dark
-          ? "linear-gradient(180deg,  #000,#000)"
+          ? "linear-gradient(180deg,  #071C31,#071C31)"
           : "linear-gradient(180deg, #FFFFFF, #FFFFFF)"
       }}
     >
@@ -35,7 +36,9 @@ export default function App() {
       >
         <AnimatePresence exitBeforeEnter>{!dark && <Midday />}</AnimatePresence>
         <AnimatePresence exitBeforeEnter>{dark && <Night />}</AnimatePresence>
-        <P animate={{ color: !dark ? "#BCCCDC" : "#DFF7FA" }}>Tap here</P>
+        <P animate={{ color: !dark ? "#BCCCDC" : "#DFF7FA" }}>
+          Tap here to toggle time
+        </P>
       </Playground>
     </Main>
   );
@@ -48,7 +51,7 @@ const Main = styled(motion.div)`
 
 const Playground = styled(motion.div)`
   overflow: hidden;
-  height: 100vh;
+  height: 90vh;
   cursor: pointer;
   width: 100%;
   border-radius: 30px;
@@ -59,7 +62,7 @@ const Playground = styled(motion.div)`
 `;
 const P = styled(motion.p)`
   position: absolute;
-  left: calc(50% - 30px);
+  left: calc(50% - 70px);
   text-align: center;
   font-size: 0.9rem;
   font-family: sans-serif;
