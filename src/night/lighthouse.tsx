@@ -120,34 +120,13 @@ const Lighthouse = ({ ...props }) => {
         </motion.g>
         {/* face end */}
         {/* light effect */}
-        <motion.g
-          initial={{ x: 0 }}
-          animate={{ x: -70 }}
-          exit={{ x: 0 }}
-          transition={{
-            repeatType: "mirror",
-            repeat: Infinity,
-            delay: 0.2,
-            duration: 2
-          }}
-          clipPath="url(#clip100)"
-        >
-          <motion.path
-            initial={{ rotateY: 0 }}
-            animate={{ rotateY: 180 }}
-            exit={{ rotateY: 0 }}
-            transition={{
-              repeatType: "mirror",
-              repeat: Infinity,
-              duration: 2,
-              delay: 0.2
-            }}
+        <g clipPath="url(#clip100)">
+          <path
             d="M94.6907 26.8482L64.5782 33.6358C58.4983 35.0062 54.1797 40.4068 54.1797 46.6394C54.1797 52.872 58.4983 58.2722 64.5782 59.6429L94.6907 66.4303C107.376 69.2898 119.439 59.6435 119.439 46.6394C119.439 33.635 107.377 23.989 94.6907 26.8482Z"
             fill="url(#paint27)"
           />
-        </motion.g>
-        {/* light effect */}
-        <g clipPath="url(#clip100)">
+
+          {/* light effect */}
           <path
             d="M53.1745 79.9497H25.4863V88.8223C30.0672 88.8245 38.4318 88.8229 53.1742 88.8229C55.6244 88.8229 57.6112 86.8366 57.6112 84.3864C57.6112 81.936 55.6249 79.9497 53.1745 79.9497Z"
             fill="#C2C8CF"
