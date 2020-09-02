@@ -34,8 +34,10 @@ export default function App() {
         }}
         whileTap={{ scale: 0.9, backgroundColor: dark ? "#102A43" : "#F4ECD1" }}
       >
-        <AnimatePresence exitBeforeEnter>{!dark && <Midday />}</AnimatePresence>
-        <AnimatePresence exitBeforeEnter>{dark && <Night />}</AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
+          {dark ? <Night /> : <Midday />}
+        </AnimatePresence>
+
         <P animate={{ color: !dark ? "#BCCCDC" : "#DFF7FA" }}>
           Tap here to toggle time
         </P>
